@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 40px; /* height of footer */
 }
 
 .App-logo {
@@ -28,7 +33,7 @@
 }
 
 .body {
- height: 400px;
+  height: 400px;
 }
 
 .ycth {
@@ -36,4 +41,11 @@
   border-radius: 10px;
   height: 200px;
   margin-top: 20px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px; /* Height of the footer */
 }
