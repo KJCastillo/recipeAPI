@@ -5,16 +5,14 @@ import Body from "./components/Body";
 import Footer from "./components/Footer";
 
 export const App = () => {
-  
-    return (
-     
-      <div className="App ">
+  return (
+    <div className="App ">
       <Navbar />
       <Header />
       <Body />
       <Footer />
-      </div>
-    );
+    </div>
+  );
 };
 
 export default App;
