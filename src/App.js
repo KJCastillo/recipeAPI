@@ -41,10 +41,11 @@ export const App = () => {
   const getSearch = e => {
     e.preventDefault();
     setQuery(search);
+    setSearch('');
   }
 //function allows you get finished search input and not every character as you type
 
-  const updateSearch = () => {
+  const updateSearch = e => {
     setSearch(e.target.value);
   };
   //function allows you to update search input
@@ -57,15 +58,15 @@ export const App = () => {
         <form onSubmit={getSearch} className="search-form pt-5">
           {/* onSubmit function is called after input is done and submitted */}
           <input
-            className="search-bar"
+            className="search-bar form-grid"
             type="text"
             value={search}
             onChange={updateSearch}
           />
           {/* pass search prop to input in order to use */}
           {/* pass updateSearch function to update input and use state */}
-          <button className="search-button" type="button">
-            search
+          <button className="search-button btn-sm btn-info ml-2" type="button">
+            yum!
           </button>
         </form>
       </div>
@@ -74,6 +75,7 @@ export const App = () => {
           title={recipe.recipe.label}
           cuisineType={recipe.recipe.cuisineType}
           image={recipe.recipe.image}
+          ingredients={recipe.recipe.ingredients}
           key={Math.random() * 1000}
         />
         //correctly call what you want to display from api
