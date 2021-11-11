@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
-import Body from "./components/Body";
 import Recipe from "./components/Recipe";
 import Footer from "./components/Footer";
 
@@ -15,7 +14,7 @@ export const App = () => {
   const [search, setSearch] = useState("");
   //empty string because we are expecting a string in the input below
 
-  const[query, setQuery] = useState('steak')
+  const [query, setQuery] = useState("steak");
   //useState made to prevent getting every character while typing input
   //bad practice as it would call API on every character
 
@@ -34,18 +33,17 @@ export const App = () => {
     const data = await response.json();
     //await before promise since fetch is from an external request, call use .then()
     setRecipes(data.hits);
-    console.log(data.hits);
   };
   //function used to call API
 
-  const getSearch = e => {
+  const getSearch = (e) => {
     e.preventDefault();
     setQuery(search);
-    setSearch('');
-  }
-//function allows you get finished search input and not every character as you type
+    setSearch("");
+  };
+  //function allows you get finished search input and not every character as you type
 
-  const updateSearch = e => {
+  const updateSearch = (e) => {
     setSearch(e.target.value);
   };
   //function allows you to update search input
@@ -54,12 +52,13 @@ export const App = () => {
     <div className="App ">
       <Navbar />
       <Header />
-      <div className="body">
+      <div className="body" >
         <form onSubmit={getSearch} className="search-form pt-5">
           {/* onSubmit function is called after input is done and submitted */}
           <input
             className="search-bar form-grid"
             type="text"
+            placeholder="search ingredient here"
             value={search}
             onChange={updateSearch}
           />
@@ -70,20 +69,21 @@ export const App = () => {
           </button>
         </form>
       </div>
-      {recipes.map((recipe) => (
-        <Recipe
-          title={recipe.recipe.label}
-          cuisineType={recipe.recipe.cuisineType}
-          image={recipe.recipe.image}
-          ingredients={recipe.recipe.ingredients}
-          key={Math.random() * 1000}
-        />
-        //correctly call what you want to display from api
-        //recipe(map param).recipe(name of array).label(name of what holds title of recipe)
-        //have key in order to stop error in console
-      ))}
-      {/* map through in order to display all recipes thru Recipe component */}
-      <Body />
+      <div className="recipe-output">
+        {recipes.map((recipe) => (
+          <Recipe className="col-4 "
+            title={recipe.recipe.label}
+            cuisineType={recipe.recipe.cuisineType}
+            image={recipe.recipe.image}
+            ingredients={recipe.recipe.ingredients}
+            key={Math.random() * 1000}
+          />
+          //correctly call what you want to display from api
+          //recipe(map param).recipe(name of array).label(name of what holds title of recipe)
+          //have key in order to stop error in console
+        ))}
+        {/* map through in order to display all recipes thru Recipe component */}
+      </div>
       <Footer />
     </div>
   );
