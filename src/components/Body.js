@@ -1,12 +1,18 @@
-import React, { Component } from "react";
+import React from "react";
 import Recipe from "./Recipe";
-import ycth from "../img/ycth.png";
 import "../App.css";
 
 const Body = () => {
+  //place props in order to use, make sure they are wrapped in curly brackets
   return (
     <div className="body">
-      <Recipe />
+      <form className="search-form pt-5">
+        <input className="search-bar" type="text"></input>
+        <button className="search-button" type="button">
+          search
+        </button>
+      </form>
+      {/* call prop and map through to put out recipes in Recipe component*/}
     </div>
   );
 };
