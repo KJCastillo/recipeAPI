@@ -18,8 +18,8 @@
 
 ## Installation
 ```
-$ git clone https://github.com/KJCastillo/toDoListReact
-$ cd toDoListReact
+$ git clone https://github.com/KJCastillo/recipeAPI
+$ cd recipeAPI
 ```
 For Windows, Mac, Linux or Gitpod, start server with live reload after python installation:
 ```
