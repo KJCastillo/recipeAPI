@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Recipe from "./components/Recipe";
 import Footer from "./components/Footer";
+import kitchen from "./img/kitchen.png";
 
 export const App = () => {
   const appID = "b987e4bd";
@@ -51,27 +52,35 @@ export const App = () => {
   return (
     <div className="App ">
       <Navbar />
-      <Header />
-      <div className="body" >
-        <form onSubmit={getSearch} className="search-form pt-5">
-          {/* onSubmit function is called after input is done and submitted */}
-          <input
-            className="search-bar form-grid"
-            type="text"
-            placeholder="search ingredient here"
-            value={search}
-            onChange={updateSearch}
-          />
-          {/* pass search prop to input in order to use */}
-          {/* pass updateSearch function to update input and use state */}
-          <button className="search-button btn-sm btn-info ml-2" type="button">
-            yum!
-          </button>
-        </form>
+      <div
+        className="body container-fluid"
+        style={{ backgroundImage: `url(${kitchen})` }}
+      >
+        <div className="row justify-content-center">
+          <form
+            onSubmit={getSearch}
+            className="search-form col-5"
+          >
+            {/* onSubmit function is called after input is done and submitted */}
+            <label className="label d-inline-block">FIND A RECIPE</label>
+            <input
+              className="search-bar form-control d-inline"
+              type="text"
+              value={search}
+              onChange={updateSearch}
+            />
+            {/* pass search prop to input in order to use */}
+            {/* pass updateSearch function to update input and use state */}
+            <button className="search-button btn btn-info mt-3" type="button">
+              yum!
+            </button>
+          </form>
+        </div>
       </div>
       <div className="recipe-output">
         {recipes.map((recipe) => (
-          <Recipe className="col-4 "
+          <Recipe
+            className="col-4"
             title={recipe.recipe.label}
             cuisineType={recipe.recipe.cuisineType}
             image={recipe.recipe.image}
