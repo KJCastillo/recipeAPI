@@ -9,7 +9,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="navbar-brand ml-auto"
-          href="https://github.com/KJCastillo/boilerplate"
+          href="https://github.com/KJCastillo/recipeAPI"
         >
           <img
             className="github-footer"

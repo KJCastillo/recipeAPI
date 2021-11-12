@@ -1,18 +1,19 @@
-# Receipe API
-<!-- https://to-do-list-kjcastillo.vercel.app/ -->
- <!-- - To Do List website made on React.js using HTML, CSS, Bootstrap, and JSX. Deployed on Vercel.
+# Recipe API
+https://recipe-api-seven.vercel.app/
+ - Recipe API website made on React.js using HTML, CSS, Bootstrap, and JSX. Deployed on Vercel.
  - This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
  
  ## Features
-- Add a new task to do
-- Mark task as complete
-- Delete task upon completion
+- Search for recipes
+- Can search for food and beverages
+- Shows cuisine type and ingredients
 
 ## Future Plans
 - Create login and sign up feature
-- Create database to hold user tasks upon sign in
+- Create database to hold user favorite recipes
+- Update API to include more recipe information
  
-> [To Do List](https://to-do-list-kjcastillo.vercel.app/) -->
+> [RecipeAPI](https://recipe-api-seven.vercel.app/)
 
 > By [Kevin Castillo](https://www.linkedin.com/in/kevinjcastillo/)
 
@@ -25,4 +26,4 @@ For Windows, Mac, Linux or Gitpod, start server with live reload after python in
 ```
 $ python3 -m http.server
 ```
-<!-- ![To Do List React Demo](demo/demo.gif) -->
+![RecipeAPI Demo](demo/demo.gif)
