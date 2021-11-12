@@ -15,7 +15,7 @@ https://recipe-api-seven.vercel.app/
  
 > [RecipeAPI](https://recipe-api-seven.vercel.app/)
 
-> By [Kevin Castillo](https://www.linkedin.com/in/kevinjcastillo/)
+> By [Kevin Castillo](https://www.linkedin.com/in/kevinjcastillo)
 
 ## Installation
 ```
